@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your-Cup</title>
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="content">
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="header__logo-link" href="/">Your-Cup</a>
+      <div class="header__button">
+        <div class="header__button-line"></div>
+        <div class="header__button-line"></div>
+        <div class="header__button-line"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="info">
+  <div class="container">
+    <div class="info__inner">
+      <a class="info__logo" href="#">
+        <img class="info__logo-img" src="images/logo.png" alt="logo-big">
+      </a>
+      <span class="info__title">
+        СТУДИЯ ПО СОЗДАНИЮ УНИКАЛЬНЫХ ПОСТЕРОВ НА ОРГАНИЧЕСКОМ СТЕКЛЕ
+      </span>
+      <span class="info__text">
+        с вашей фотографией / любимой песней
+      </span>
+    </div>
+  </div>
+</section>
+      <section class="products">
+  <div class="container">
+    <div class="products__wrapper">
+      <div class="products__item products__item--new">
+        <a class="products__link" href="#">
+          <img class="products__img" src="images/product.jpg" alt="item-img">
+          <img class="products__img-add" src="images/item-img-2.webp" alt="item-img">
+
+        </a>
+        <a class="products__info-link" href="#">
+          <span class="products__title">TRACK POSTER — ХИТ 2020</span>
+          <span class="products__text">ВОСПРОИЗВОДИТ ПЕСНИ</span>
+          <span class="products__description">Вы можете воспроизвести вашу любимую песню на своём телефоне в официальном
+            приложении Spotify, наведя камеру телефона на специальный код, находящийся на постере.</span>
+          <span class="products__price">300 грн</span>
+        </a>
+        <a class="products__buy-link" data-fancybox data-src="#modal" href="javascript:;">купить</a>
+      </div>
+
+      <div class="products__item products__item--new">
+        <a class="products__link" href="#">
+          <img class="products__img" src="images/product-podstavka.jpg" alt="item-img">
+          <img class="products__img-add" src="images/product-podstavka-add.jpg" alt="item-img">
+
+        </a>
+        <a class="products__info-link" href="#">
+          <span class="products__title">TRACK POSTER — ХИТ 2020 + ПОДСТАВКА</span>
+          <span class="products__text">ВОСПРОИЗВОДИТ ПЕСНИ</span>
+          <span class="products__description">Вы можете воспроизвести вашу любимую песню на своём телефоне в официальном
+            приложении Spotify, наведя камеру телефона на специальный код, находящийся на постере.</span>
+          <span class="products__price">400 грн</span>
+        </a>
+        <a class="products__buy-link" data-fancybox data-src="#modal" href="javascript:;">купить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="products__buy-wrapper js-hidden" id="modal">
+  <div class="products__buy">
+    <div class="products__buy-inner">
+      <div class="products__buy-gallery">
+
+        <div class="swiper-container gallery-top">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(images/prod-1.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-2.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-3.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-4.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-5.jpg)">
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-container gallery-thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(images/prod-1.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-2.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-3.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-4.jpg)">
+            </div>
+            <div class="swiper-slide" style="background-image:url(images/prod-5.jpg)">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="products__buy-info">
+        <span class="products__buy-title g-title">TRACK POSTER — ХИТ 2020</span>
+        <div class="products__price-wrapper">
+          <span class="products__buy-price g-text" id="result">300</span>
+          <span class="products__buy-price g-text">грн</span>
+        </div>
+        <form action="buy.php" class="products__buy-form">
+
+          <label class="products__buy-choice" for="size">
+            Размер:
+          </label>
+          <select class="products__select-choice" onchange="calc()" name="size" id="size">
+            <option value="300">21/32</option>
+            <option value="400">30/46</option>
+          </select>
+
+          <label class="products__buy-choice" for="color">
+            Цвет текста:
+          </label>
+          <select class="products__select-choice" onchange="calc()" name="color" id="color">
+            <option value="0">Белый</option>
+            <option value="0">Черный</option>
+            <option value="30">Два цвета</option>
+          </select>
+
+          <label class="products__buy-choice" for="stand">
+            Подставка и коробка:
+          </label>
+          <select class="products__select-choice" onchange="calc()" name="stand" id="stand">
+            <option value="0">Без подставки</option>
+            <option value="100">С подставкой</option>
+          </select>
+
+          <input class="products__buy-send products__buy-link" type="submit" value="КУПИТЬ">
+        </form>
+        <!-- <span class="products__buy-discription g-text">
+          <span class="text-bold">Трек постер</span> - это постер с вашей фотографией и памятной песней.
+          На постере находится специальный код, который позволяет в одну секунду воспроизвести вашу любимую песню на
+          телефоне. Доступно для iOS и Android.
+
+          Ведь всего лишь одна песня может хранить в себе множество приятных воспоминаний, которые хочется сохранить в
+          офлайн.
+          Благодаря нашему трек постеру вы можете сохранить самые ценные минуты вашей жизни на долгую и добрую память!
+        </span> -->
+
+      </div>
+    </div>
+  </div>
+</div>
+      <section class="moments">
+  <div class="moments__item">
+    <div class="moments__info">
+      <div class="moments__info-wrapper">
+        <span class="moments__heading g-heading">Your-Cup</span>
+        <span class="moments__title g-title">ОДИН ИЗ ЛУЧШИХ ПОДАРКОВ</span>
+        <span class="moments__text">Наши постеры прекрасно подойдут для выбора подарка на юбилей, день рождения,
+          выпускной или просто для того, чтобы запомнить особый момент в вашей жизни</span>
+      </div>
+    </div>
+    <div class="moments__img" style="background-image: url(images/moments.webp);"></div>
+  </div>
+
+  <div class="moments__item">
+    <div class="moments__info">
+      <div class="moments__info-wrapper moments__info-wrapper--two">
+        <span class="moments__heading g-heading">Your-Cup</span>
+        <span class="moments__title g-title">СОХРАНЯЙТЕ ЛУЧШИЕ МОМЕНТЫ</span>
+        <span class="moments__text">Сохраните ваши любимые посты и песни в оффлайн, создав привлекательную вещь,
+          которую
+          вы можете расположить в любом месте вашего дома</span>
+      </div>
+    </div>
+    <div class="moments__img" style="background-image: url(images/moments-2.webp);"></div>
+  </div>
+</section>
+      <section class="advantages">
+  <div class="container">
+    <span class="advantages__img"></span>
+    <span class="advantages__heading g-heading">SAVE IT OFFLINE</span>
+    <span class="advantages__title g-title">ВЫСОКОКАЧЕСТВЕННАЯ ЗАВОДСКАЯ ПЕЧАТЬ</span>
+    <span class="advantages__text g-text">Органическое стекло — не темнеет и не желтеет в процессе эксплуатации десятилетиями</span>
+    <span class="advantages__text g-text">УФ печать — долговечна и устойчива к любым внешним воздействиям</span>
+    <span class="advantages__text g-text">Нанесение выполняется на обратной стороне стекла, защищая изображение от механических повреждений во время уборки.</span>
+  </div>
+</section>
+      <section class="gallery">
+  <div class="container">
+    <div class="gallery__inner">
+      <a class="gallery__link" href="#">
+        <div class="gallery__img" style="background-image: url(images/reviews-1.jpg);">
+        </div>
+        <span class="gallery__img-mask"></span>
+      </a>
+      <a class="gallery__link" href="#">
+        <div class="gallery__img" style="background-image: url(images/reviews-2.jpg);">
+        </div>
+        <span class="gallery__img-mask"></span>
+      </a>
+      <a class="gallery__link" href="#">
+        <div class="gallery__img" style="background-image: url(images/reviews-3.jpg);">
+        </div>
+        <span class="gallery__img-mask"></span>
+      </a>
+      <a class="gallery__link" href="#">
+        <div class="gallery__img" style="background-image: url(images/reviews-4.jpg);">
+        </div>
+        <span class="gallery__img-mask"></span>
+      </a>
+    </div>
+  </div>
+</section>
+      <section class="poster">
+  <div class="container">
+    <div class="poster__inner">
+      <span class="poster__heading g-heading">SAVE IT OFFLINE</span>
+      <span class="poster__title g-title">TRACK POSTER — ХИТ 2020</span>
+      <span class="poster__title g-title">ВОСПРОИЗВОДИТ ПЕСНИ</span>
+      <span class="poster__text g-text">Вы можете воспроизвести вашу любимую песню на своём телефоне в приложении
+        Spotify, наведя камеру телефона на специальный код, находящийся на постере.</span>
+      <img class="poster__img" src="images/spotify.webp" alt="spotify">
+    </div>
+  </div>
+</section>
+      <section class="promo">
+  <div class="container">
+    <div class="promo__inner">
+      <span class="promo__heading g-heading">В ЗНАК НАШЕГО ЗНАКОМСТВА</span>
+      <span class="promo__title g-title">ПОЛУЧИ СКИДКУ 33%</span>
+      <span class="promo__text g-text">Укажите телефон и мы Вам перезвоним</span>
+      <form class="promo__form" action="promo-submit.php" method="post" id="promo-phone">
+        <input class="promo__phone" type="tel" name="tel" placeholder="Ваш номер телефона">
+        <input class="promo__submit" type="submit" id="prono-submit" value="Получить скидку">
+      </form>
+    </div>
+  </div>
+</section>
+      <section class="individual">
+  <div class="container">
+    <span class="individual__img"></span>
+    <span class="individual__title g-title">Индивидуальный размер постера</span>
+    <span class="individual__text g-text">Чтобы изготовить постер нестандартного размера или просто сделать заказ свяжитесь с нами в соцсетях или по телефону:
+      <a class="individual__phone" href="tel:+380509453381">+380509453381</a>
+    </span>
+  </div>
+</section>
+      <section class="contacts">
+  <div class="container">
+    <div class="contacts__inner">
+      <a href="mailto:store@your-cup.com.ua" class="contacts__mail">Store@your-cup.com.ua</a>
+      <div class="contacts__links">
+        <a class="contacts__link" href="http://instagram.com/_u/your_cup_ukr/">
+          <img class="contacts__link-img" src="images/icons/inst.svg" alt="instagram">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+  </div>
+
+  <footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__lists">
+        <ul class="footer__list">
+          <li class="footer__list-title">Контакты</li>
+          <li class="footer__item">
+            <a href="mailto:homypost@gmail.com" class="footer__link">Store@your-cup.com.ua</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__list-title">Мы в соц. сетях</li>
+          <li class="footer__item">
+            <a class="footer__link" href="http://instagram.com/_u/your_cup_ukr/">Instagram</a>
+          </li>
+        </ul>
+      </div>
+      <a class="footer__link" href="#">
+        Политика конфиденциальности
+      </a>
+    </div>
+    <div class="footer__bottom">
+      <a href="/" class="footer__link footer__link--bottom">Your-Cup &copy;</a>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+
+</html>
